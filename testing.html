@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Corona Testing</title>
+  <link rel="stylesheet" href="testing.css">
+</head>
+<body>
+        <div id="navbar">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="testing.html">Corona Testing</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="regform">
+            <h1>Corona Testing Form</h1>
+        </div>
+        <div class="main">
+            <form id="testForm">
+                <div id="name">
+                    <h2 class="name">Name:</h2>
+                    <input id="firstname" type="text" required name="first_name"><br>
+                    <label id="firstlabel">First Name</label>
+                    <input id="lastname" type="text" required name="last_name"><br>
+                    <label id="lastlabel">Last Name</label>
+                </div>
+                <h2 class="name">Profession:</h2>
+                <input id="profession" type="text" placeholder="Enter your Profession" name="profession">
+                <h2 class="name">Email Id:</h2>
+                <input id="email" type="text" required name="email">
+                <h2 class="name">Date of Birth:</h2>
+                <input id="dateofbirth" type="date" required name="dateofbirth">
+                <h2 class="name">Mobile Number:</h2>
+                <input id="mobile" type="text" name="mobile" required pattern="[789][0-9]{9}">
+                <h2 class="name">States:</h2>
+                <select id="state" name="state">
+                    <option disabled="disabled" required selected="selected">Choose</option>
+                    <option>Maharashtra</option>
+                    <option>Punjab</option>
+                    <option>Delhi</option>
+                    <option>Gujarat</option>
+                </select>
+                <h2 id="travel">Have you travelled to any Covid affected Country in the last 1 month?</h2>
+                <div id="travel">
+                    <input type="radio" name="option" value="yes">Yes
+                    <input type="radio" name="option" value="no" checked="checked">No
+                </div>
+                <h2 id="symptoms">Do you have any of the Following Symptoms?</h2>
+                <div class="arrange">
+                    <input type="checkbox" name="symptoms" value="fever" id="cb1">
+                    <label for="cb1">Fever</label>
+                    <br>
+                    <input type="checkbox" name="symptoms" value="cold" id="cb2">
+                    <label for="cb2">Cold</label>
+                    <br>
+                    <input type="checkbox" name="symptoms" value="cough" id="cb3">
+                    <label for="cb3">Cough</label>
+                    <br>
+                    <input type="checkbox" name="symptoms" value="chestpain" id="cb4">
+                    <label for="cb4">Chest Pain</label>
+                </div>
+                <input id="submit" type="submit">
+                <h2 id="centers"> Testing Centres around you: <span id="result"></span><br>
+            </form>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase.js"></script>
+        <script src="testing.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-analytics.js"></script>
+</body>
+</html>
